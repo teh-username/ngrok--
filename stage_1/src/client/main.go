@@ -35,8 +35,9 @@ func handleConnection(sourceConn net.Conn, targetAddr string) {
 		log.Println(err)
 		return
 	}
-	log.Printf("Connection to %s established", targetConn.RemoteAddr().String())
+	defer sourceConn.Close()
 	defer targetConn.Close()
+	log.Printf("Connection to %s established", targetConn.RemoteAddr().String())
 
 	sourceChan := generateListenChannel(sourceConn)
 	targetChan := generateListenChannel(targetConn)
