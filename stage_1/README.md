@@ -22,3 +22,10 @@ It should look like:
 To verify, run the client code `go run main.go` then execute `curl localhost:54286` on a separate console. You can also try to open `http://localhost:54286` on your browser.
 
 [Home](../README.md)
+
+### References
+
+* https://github.com/inconshreveable/ngrok/blob/master/docs/DEVELOPMENT.md
+* https://www.stavros.io/posts/proxying-two-connections-go/
+* https://github.com/nu7hatch/areyoufuckingcoding.me/blob/master/content/2012/08/03/tricks-tips-adapt-blocking-io-to-channel.md
+* https://blog.cloudflare.com/this-is-strictly-a-violation-of-the-tcp-specification/
