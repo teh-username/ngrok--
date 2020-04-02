@@ -10,7 +10,7 @@ import (
 const defaultClientPort = "54286"
 
 // Allows us to interleave blocking IOs by converting them into channels
-func generateListenChannel(conn net.Conn, categ string) <-chan []byte {
+func generateListenChannel(conn net.Conn) <-chan []byte {
 	listener := make(chan []byte)
 	go func() {
 		buf := make([]byte, 1024)
@@ -38,8 +38,8 @@ func handleConnection(sourceConn net.Conn, targetAddr string) {
 	log.Printf("Connection to %s established", targetConn.RemoteAddr().String())
 	defer targetConn.Close()
 
-	sourceChan := generateListenChannel(sourceConn, "source")
-	targetChan := generateListenChannel(targetConn, "target")
+	sourceChan := generateListenChannel(sourceConn)
+	targetChan := generateListenChannel(targetConn)
 
 	for {
 		select {
