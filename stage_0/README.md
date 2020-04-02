@@ -1,6 +1,6 @@
-## Stage 1
+## Stage 0
 
-In this stage, we'll implement a simple client-side proxy that can tunnel tcp packets to and from a target local server. We'll be iterating over this code in later stages.
+In this stage, we'll implement a simple client-side proxy that can tunnel tcp packets to and from a target local server. We'll be using this code in later stages.
 
 It should look like:
 
