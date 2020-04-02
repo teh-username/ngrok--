@@ -1,12 +1,15 @@
 ## ngrok--
 
-An attempt on an inferior implementation of [ngrok](https://github.com/inconshreveable/ngrok).
+An iterative attempt on an inferior implementation of [ngrok](https://github.com/inconshreveable/ngrok).
 
-## Scope and Limitations
+### Scope and Limitations
 
 We'll only be considering a singular tunnel of HTTP traffic.
 
-## How ngrok-- works
+### Stages
+* [Stage 1](stage_1/README.md) - Implementing a simple client-side proxy
+
+### How ngrok-- works
 
 [ngrok](https://github.com/inconshreveable/ngrok/blob/master/docs/DEVELOPMENT.md) provides a succint explanation of how it works on high level which we'll be using as our reference.
 
@@ -23,7 +26,7 @@ Traffic flow should resemble the "diagram" below:
                                Firewall/NAT
 ```
 
-## Resources
+### Resources
 
 * https://github.com/inconshreveable/ngrok/blob/master/docs/DEVELOPMENT.md
 * https://www.stavros.io/posts/proxying-two-connections-go/
