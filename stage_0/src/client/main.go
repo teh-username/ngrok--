@@ -10,7 +10,7 @@ import (
 const defaultClientPort = "54286"
 
 // Allows us to interleave blocking IOs by converting them into channels
-func generateListenChannel(conn net.Conn) <-chan []byte {
+func createConnListenChannel(conn net.Conn) <-chan []byte {
 	listener := make(chan []byte)
 	go func() {
 		buf := make([]byte, 1024)

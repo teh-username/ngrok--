@@ -9,7 +9,7 @@ import (
 
 const defaultControlPort = ":60623"
 
-func generateListenChannel(conn net.Conn) <-chan []byte {
+func createConnListenChannel(conn net.Conn) <-chan []byte {
 	listener := make(chan []byte)
 	go func() {
 		for {
