@@ -9,7 +9,8 @@ We'll only be considering a singular tunnel of HTTP traffic.
 ### Stages
 
 * [Stage 0](stage_0/README.md) - Proof of concept implementation of a simple client-side proxy
-* [Stage 1](stage_1/README.md) - Base server and client implementation plus intro to the control connection
+* [Stage 1](stage_1/README.md) - Server, client and control connection implementation
+* [Stage 2](stage_2/README.md) - Implementing public and proxy connection
 
 ### How ngrok-- works
 
