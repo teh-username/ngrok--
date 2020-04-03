@@ -28,4 +28,4 @@ To verify, run the client code `go run main.go` then execute `curl localhost:542
 * [GoTip #1 - Adapt blocking IO to a channel](https://github.com/nu7hatch/areyoufuckingcoding.me/blob/master/content/2012/08/03/tricks-tips-adapt-blocking-io-to-channel.md)
 * [This is strictly a violation of the TCP specification](https://blog.cloudflare.com/this-is-strictly-a-violation-of-the-tcp-specification/)
 
-[Home](../README.md) || [Next](../stage_1/README.md)
+[Home](../README.md) <<>> [Next](../stage_1/README.md)
