@@ -7,7 +7,9 @@ An iterative attempt on an inferior implementation of [ngrok](https://github.com
 We'll only be considering a singular tunnel of HTTP traffic.
 
 ### Stages
-* [Stage 0](stage_1/README.md) - Proof of Concept implementation of a simple client-side proxy
+
+* [Stage 0](stage_1/README.md) - Proof of concept implementation of a simple client-side proxy
+* [Stage 1](stage_1/README.md) - Base server and client implementation plus intro to the control connection
 
 ### How ngrok-- works
 
