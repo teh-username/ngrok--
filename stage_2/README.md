@@ -3,40 +3,28 @@
 We'll be shifting gears on this stage by implementing the following flow:
 _Note: We're assuming that the control connection of the previous stage has already been established_
 
+```
+                       3
+                +----------------+
+                |                |
+                |                |
+                |           +----|--------------------+
+                v           |    v        4           |
++----+   2   +------+       | +------+ ------+        |
+|user|------>|server|       | |client|       | echo   |
++----+       +------+       | +------+ <-----+        |
+                ^           |    ^                    |
+                |           +----|--------------------+
+                |                |            Firewall/
+                |                |            NAT
+                +----------------+
+                        2
+```
+
 1) [Server] Open a public and proxy port
 2) [Server] On new public connection, send command to create proxy to client over the control connection
 3) [Client] Dial a tcp connection to proxy port of server
 4) [Server] On new proxy connection, pipe traffic between public and proxy connection
-
-or visually:
-
-```
-+----+         +------+         +------+
-|user|-------->|server|         |client|
-+----+         +------+         +------+
-                  ^                 ^
-                  |                 |
-                  |                 |
-                  +-----------------+
-                      create_proxy
-                      command
-
-------------------------------------------
-
-                       proxy
-                       connection
-                  +-----------------+
-                  |                 |
-                  |                 |
-                  v                 v
-+----+         +------+         +------+
-|user|-------->|server|         |client|
-+----+         +------+         +------+
-                  ^                 ^
-                  |                 |
-                  |                 |
-                  +-----------------+
-```
 
 Now we see the importance of the control connection. It basically gives the server the capability of on-demand proxy tunnel creation whenever a public user attempts to access the "localhost" content.
 
@@ -48,4 +36,5 @@ To verify that everything is working, run `netcat localhost 60624`. Anything you
 
 You can also run `watch -n 1 ss -nt dst 127.0.0.1` on a separate terminal to see the tcp sockets being utilized.
 
-[Previous](../stage_1/README.md)
+
+[Previous](../stage_1/README.md) <<>> [Next](../stage_3/README.md)

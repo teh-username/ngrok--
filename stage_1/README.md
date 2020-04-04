@@ -13,4 +13,5 @@ The client-initiated control connection can be considered to be the foundation o
 
 In [ngrok's case](https://github.com/inconshreveable/ngrok/blob/master/docs/DEVELOPMENT.md#wire-format), it uses netstrings as the format for the commands send down the control connection. For ngrok--, we'll just go with newline ('\n') delimited commands.
 
+
 [Previous](../stage_0/README.md) <<>> [Next](../stage_2/README.md)
